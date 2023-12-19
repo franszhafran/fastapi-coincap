@@ -1,0 +1,13 @@
+version: '3'
+services:
+    fastapi:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        tty: true
+        container_name: fastapi
+        environment:
+            # 32 in length
+            APP_KEY: 8jwh32s6bnjt6cpqshq8ewrtereqkop9
+        ports:
+            - '80:80'
